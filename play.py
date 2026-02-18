@@ -38,7 +38,9 @@ def play():
                 print("Possible words remaining : " + str(len(solver.possible_words)))
             else:
                 print("The word is : " + suggestion)
-                exit()
+
+                if is_manaul:
+                    exit()
 
         if not is_manaul:
             guess = str(input("Enter guess here (" + str(game.turn_counter + 1) + "/6) : ")).lower().strip()
